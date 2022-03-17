@@ -6,14 +6,14 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:08:28 by tdeville          #+#    #+#             */
-/*   Updated: 2022/03/16 14:09:29 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:55:07 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include "../include/gc.h"
 
-static void	get_line(t_track **track,char **line, int fd, char *buffer)
+static void	get_line(t_track **track, char **line, int fd, char *buffer)
 {
 	int		r;
 	char	*tmp;
@@ -23,7 +23,7 @@ static void	get_line(t_track **track,char **line, int fd, char *buffer)
 	{
 		buffer[r] = '\0';
 		if (!*line)
-			*line = gc_substr(&track, buffer, 0, r);
+			*line = gc_substr(track, buffer, 0, r);
 		else
 		{
 			tmp = *line;
@@ -58,11 +58,11 @@ static char	*parse_line(t_track **track, char **line)
 	j = ft_strlen(ft_strchr(*line, '\n'));
 	mem = *line;
 	tmp = gc_substr(track, *line, 0, ft_strlen(*line) - j + 1);
-	*line = gc_substr(ft_strchr(*line, '\n'), 1, j);
+	*line = gc_substr(track, ft_strchr(*line, '\n'), 1, j);
 	return (tmp);
 }
 
-char	*get_next_line(t_track **track, int fd)
+char	*gc_get_next_line(t_track **track, int fd)
 {
 	static char	*line;
 	char		*str;
@@ -71,7 +71,7 @@ char	*get_next_line(t_track **track, int fd)
 	if (read(fd, buffer, 0) == -1 || BUFFER_SIZE < 0)
 		return (NULL);
 	if (!(ft_strchr(line, '\n')))
-		get_line(track ,&line, fd, buffer);
+		get_line(track, &line, fd, buffer);
 	str = parse_line(track, &line);
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 17:30:06 by pat               #+#    #+#             */
-/*   Updated: 2022/03/16 13:30:11 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:29:47 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ static size_t	count_word(char const *s, char c)
 
 char	**gc_split(t_track **track, char const *s, char c)
 {
-	int		i;
+	int			i;
 	size_t		j;
 	size_t		size;
-	char	**newstring;
-	newstring = NULL;
+	char		**newstring;
 
+	newstring = NULL;
 	i = 0;
 	j = -1;
 	if (!s)

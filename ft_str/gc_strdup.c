@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:58:46 by rmattheo          #+#    #+#             */
-/*   Updated: 2022/03/16 13:20:26 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:20:08 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*gc_strdup(t_track **track, const char *src)
 {
 	char	*dest;
 
-	dest = gc_calloc(sizeof(char),ft_strlen(src) + 1, track);
+	dest = gc_calloc(sizeof(char), ft_strlen(src) + 1, track);
 	if (!dest)
 		return (0);
 	ft_strcpy(dest, src);

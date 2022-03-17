@@ -6,14 +6,15 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 20:46:39 by rmattheo          #+#    #+#             */
-/*   Updated: 2022/03/16 14:16:36 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:46:34 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include "../include/gc.h"
 
-char	*gc_substr(t_track **track, const char *s, unsigned int start, size_t len)
+char	*gc_substr(t_track **track, const char *s,
+			unsigned int start, size_t len)
 {
 	size_t			i;
 	size_t			length;

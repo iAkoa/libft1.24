@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:30:46 by rmattheo          #+#    #+#             */
-/*   Updated: 2022/03/16 12:15:17 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:31:31 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	gc_lstadd_front(t_track **track, t_track *new)
 		return ;
 	new->next = *track;
 	(*track)->prev = new;
-	*track= new;
+	*track = new;
 }

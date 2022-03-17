@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 17:30:06 by pat               #+#    #+#             */
-/*   Updated: 2022/03/14 16:38:25 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:28:46 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,11 @@ char	**ft_split(char const *s, char c)
 	int		size;
 	char	**newstring;
 
-	newstring = NULL;
 	i = 0;
 	j = -1;
 	if (!s)
 		return (0);
 	size = count_word(s, c);
-	
 	newstring = ft_calloc(sizeof(char *), (count_word(s, c) + 1));
 	if (!newstring)
 		return (0);

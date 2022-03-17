@@ -6,7 +6,7 @@
 #    By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:45:37 by rmattheo          #+#    #+#              #
-#    Updated: 2022/03/16 14:18:22 by pat              ###   ########lyon.fr    #
+#    Updated: 2022/03/16 17:53:20 by pat              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ SRCS	=	ft_check/ft_isalpha.c			\
 			ft_put/ft_putnbr_base.c			\
 			ft_put/ft_putendl_fd.c			\
 			ft_gnl/get_next_line.c			\
+			ft_gnl/gc_get_next_line.c		\
 			ft_maths/ft_round.c				\
 			ft_maths/ft_colinterpolate.c	\
 			ft_lst/ft_lstnew.c				\

@@ -6,14 +6,14 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 01:57:22 by rmattheo          #+#    #+#             */
-/*   Updated: 2022/03/11 00:48:02 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/16 17:40:10 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include "../include/gc.h"
 
-int strsame (char *s)
+int	strsame(char *s)
 {
 	int	i;
 	int	j;
@@ -33,7 +33,7 @@ int strsame (char *s)
 	return (0);
 }
 
-int strlength(char *s)
+int	strlength(char *s)
 {
 	int	i;
 
@@ -43,7 +43,7 @@ int strlength(char *s)
 	return (i);
 }
 
-int cbase (char c, char *base)
+int	cbase(char c, char *base)
 {
 	int	i;
 
@@ -51,13 +51,13 @@ int cbase (char c, char *base)
 	while (base[i])
 	{
 		if (base[i] == c)
-			return (i);	
+			return (i);
 		i++;
 	}
 	return (-1);
 }
 
-int checkbase(char *base)
+int	checkbase(char *base)
 {
 	int	i;
 
@@ -75,16 +75,16 @@ int checkbase(char *base)
 	return (1);
 }
 
-int ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
 	int	i;
 	int	sign;
-	int result;
-	
+	int	result;
+
 	result = 0;
 	i = 0;
 	sign = 1;
-	if(!checkbase(base))
+	if (!checkbase(base))
 		return (0);
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
