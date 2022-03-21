@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:38:45 by pat               #+#    #+#             */
-/*   Updated: 2022/03/16 17:30:12 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/18 16:56:46 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	gc_lstclear(t_track **lst, void (*del)(void*))
 {
 	t_track	*temp;
 
-	if (!*lst)
+	if (!lst)
 		return ;
 	while (*lst)
 	{
@@ -25,7 +25,6 @@ void	gc_lstclear(t_track **lst, void (*del)(void*))
 		gc_lstdelone(*lst, del);
 		*lst = temp;
 	}
-	*lst = NULL;
 }
 
 void	gc_free_all(t_track **track)

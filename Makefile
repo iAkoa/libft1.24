@@ -6,7 +6,7 @@
 #    By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:45:37 by rmattheo          #+#    #+#              #
-#    Updated: 2022/03/16 17:53:20 by pat              ###   ########lyon.fr    #
+#    Updated: 2022/03/21 15:52:36 by pat              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS	=	ft_check/ft_isalpha.c			\
 			ft_str/gc_substr.c			\
 			ft_str/gc_strjoin.c			\
 			ft_str/gc_strdup.c			\
+			ft_str/gc_strtrim.c			\
 			ft_malloc/ft_bzero.c			\
 			ft_malloc/ft_calloc.c			\
 			ft_malloc/gc_calloc.c			\
@@ -81,7 +82,8 @@ SRCS	=	ft_check/ft_isalpha.c			\
 			ft_gc/gc_free_all.c			\
 			ft_gc/gc_free_malloc.c		\
 			ft_gc/gc_free_malloc_split.c\
-			ft_gc/gc_lstdelone.c
+			ft_gc/gc_lstdelone.c		\
+			ft_gc/gc_error.c
 
 
 OBJS    = ${SRCS:.c=.o}

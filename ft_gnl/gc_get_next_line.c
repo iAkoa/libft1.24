@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:08:28 by tdeville          #+#    #+#             */
-/*   Updated: 2022/03/16 17:55:07 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/21 14:43:53 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ static char	*parse_line(t_track **track, char **line)
 	{
 		if (*line[0] == '\0')
 		{
-			free(*line);
-			*line = NULL;
+			gc_free_malloc(track, *(void **)line);
 			return (NULL);
 		}
 		tmp = gc_substr(track, *line, 0, ft_strlen(*line));

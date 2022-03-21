@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gc_lstdelone.c                                     :+:      :+:    :+:   */
+/*   gc_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 14:55:57 by pat               #+#    #+#             */
-/*   Updated: 2022/03/18 16:57:11 by pat              ###   ########lyon.fr   */
+/*   Created: 2022/03/21 15:45:47 by pat               #+#    #+#             */
+/*   Updated: 2022/03/21 15:56:42 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/gc.h"
 #include "../include/libft.h"
+#include "../include/gc.h"
 
-void	gc_lstdelone(t_track *lst, void (*del)(void*))
+void	gc_error(t_track **track)
 {
-	if (lst)
-	{
-		if (lst->address)
-		{
-			del(lst->address);
-			lst->address = NULL;
-			lst->next = NULL;
-			free(lst);
-		}
-	}
+	if (*track)
+		gc_free_all(track);
+	exit(0);
 }
