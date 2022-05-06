@@ -6,7 +6,7 @@
 /*   By: pat <pat@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 17:31:52 by rmattheo          #+#    #+#             */
-/*   Updated: 2022/03/16 17:51:06 by pat              ###   ########lyon.fr   */
+/*   Updated: 2022/03/21 16:04:38 by pat              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ char	*gc_itoa(t_track **track, int n)
 	if (nb < 0)
 		nb = -nb;
 	str = gc_calloc(sizeof(char), (i + 1), track);
-	if (!str)
-		return (NULL);
 	if (n < 0)
 		str[0] = '-';
 	while (nb >= 10)
